@@ -1,0 +1,2 @@
+Mplayer with FAAC support - fork of original rpmfusion's SPEC-file with enabled FAAC support.
+It needs for aEncoder - video encoder for android devices.
