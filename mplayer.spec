@@ -8,6 +8,7 @@ Name:           mplayer
 Version:        1.0
 Release:        0.124.%{pre}.faac%{?dist}
 Summary:        Movie player playing most video formats and DVDs
+Epoch:          0
 
 Group:          Applications/Multimedia
 %if 0%{!?_without_amr:1}
