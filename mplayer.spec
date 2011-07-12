@@ -8,7 +8,7 @@ Name:           mplayer
 Version:        1.0
 Release:        0.124.%{pre}.faac%{?dist}
 Summary:        Movie player playing most video formats and DVDs
-Epoch:          0
+Epoch:		5
 
 Group:          Applications/Multimedia
 %if 0%{!?_without_amr:1}
@@ -106,7 +106,7 @@ BuildRequires:  libxslt
 %endif
 Obsoletes:      mplayer-fonts
 Requires:       faad2-libs >= %{faad2min}
-Requires:       mplayer-common = %{version}-%{release}
+Requires:       mplayer-common = %{epoch}:%{version}-%{release}
 
 %description
 MPlayer is a movie player that plays most MPEG, VOB, AVI, OGG/OGM,
@@ -133,6 +133,7 @@ Non-default rpmbuild options:
 %package        common
 Summary:        MPlayer common files
 Group:          Applications/Multimedia
+Epoch:		5
 
 %description    common
 This package contains common files for MPlayer packages.
@@ -140,8 +141,9 @@ This package contains common files for MPlayer packages.
 %package        gui
 Summary:        GUI for MPlayer
 Group:          Applications/Multimedia
-Requires:       mplayer-common = %{version}-%{release}
+Requires:       mplayer-common = %{epoch}:%{version}-%{release}
 Requires:       hicolor-icon-theme
+Epoch:		5
 
 %description    gui
 This package contains a GUI for MPlayer and a default skin for it.
@@ -149,7 +151,8 @@ This package contains a GUI for MPlayer and a default skin for it.
 %package     -n mencoder
 Summary:        MPlayer movie encoder
 Group:          Applications/Multimedia
-Requires:       mplayer-common = %{version}-%{release}
+Requires:       mplayer-common = %{epoch}:%{version}-%{release}
+Epoch:		5
 
 %description -n mencoder
 This package contains the MPlayer movie encoder. 
@@ -157,6 +160,7 @@ This package contains the MPlayer movie encoder.
 %package        doc
 Summary:        MPlayer documentation in various languages
 Group:          Documentation
+Epoch:		5
 
 %description    doc
 MPlayer documentation in various languages.
@@ -166,6 +170,7 @@ Summary:        Useful scripts for MPlayer
 Group:          Applications/Multimedia
 Requires:       mencoder = %{version}-%{release}
 Requires:       mplayer = %{version}-%{release}
+Epoch:		5
 
 %description    tools
 This package contains various scripts from MPlayer TOOLS directory.
